@@ -7,7 +7,7 @@
 
 @import 'theme.json';
 
-@if map-get-deep($ui, 'theme') == 'One-Nexus' {
+@if map-get-deep($ui, 'theme') == 'canva' {
 
     // Merge config with UI-level config
     $theme: map-merge-deep($theme, map-get($ui, 'modules'));
@@ -28,44 +28,15 @@
     @include container;
     @include core;
     @include helpers;
-    @include print;
 
     ///************************************************************
     /// Elements
     ///************************************************************
 
-    @include accordion;
-    @include alert;
-    @include blockquote;
-    @include button;
-    @include carousel;
-    @include form;
-    @include heading;
-    @include image;
-    @include list;
-    @include modal;
-    @include progress-bars;
-    @include tables;
-    @include tabs;
-    @include tooltips;
-    @include wells;
 
     ///************************************************************
     /// Objects
     ///************************************************************
 
-    @include billboard;
-    @include breadcrumb;
-    @include footer;
-    @include google-map;
-    @include header;
-    @include logo;
-    @include navigation;
-    @include dropdown;
-    @include preloader;
-    @include side-nav;
-    @include scroll-top;
-    @include search;
-    @include overlay;
 
 }

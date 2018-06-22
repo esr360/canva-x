@@ -23,7 +23,7 @@
             "component-glue": "'_'",
             "modifier-glue": "'-'",
             "fizz": "buzz",
-            "theme": "One-Nexus",
+            "theme": "canva",
             "modules": {
                 "fizz": ["#COLOR", "brand", "brand-5"],
                 "alert": {

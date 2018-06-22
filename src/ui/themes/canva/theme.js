@@ -9,7 +9,7 @@ import * as UI from '../../ui';
 import config from './theme.json';
 
 /**
- * @example import One_Nexus from './themes/One-Nexus/theme'
+ * @example import canva from './themes/canva/theme'
  * @param {Object} custom 
  */
 export default function(custom) {
@@ -20,35 +20,17 @@ export default function(custom) {
     /// Utilities
     ///************************************************************
 
-    UI.colors();
-    UI.grid();
-    UI.typography();
-    UI.core();
+    //UI.colors();
 
     ///************************************************************
     /// Elements
     ///************************************************************
 
-    UI.accordion(options.accordion);
-    UI.alert(options.alert);
-    UI.carousel();
-    UI.form();
-    UI.modal(options.modal);
-    UI.overlay();
-    // UI.progressBar();
-    // UI.tabs();
-    // UI.tooltips();
+    //UI.accordion(options.accordion);
 
     ///************************************************************
     /// Objects
     ///************************************************************
-
-    // UI.googleMap();
-    // UI.header();
-    // UI.preloader();
-    // UI.scrollTop();
-    // UI.search();
-    // UI.sideNav();
 
     window.THEME = UI.evalConfig(UI.deepextend(UI.config, options));
 }

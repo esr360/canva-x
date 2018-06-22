@@ -34,17 +34,19 @@ export {
 // Tools
 //*****************************************************************
 
-import { formatThemeName } from './tools/js/app.formatThemeName';
+import { evalConfig } from './tools/js/app.evalConfig';
+
+export { evalConfig };
 
 // Theme
 //*****************************************************************
 
-export { default as One_Nexus } from './themes/One-Nexus/theme';
+export { default as canva } from './themes/canva/theme';
 
 export default function(custom, callback) {
     config.ui = deepextend(config.ui, custom);
     
-    UI[formatThemeName(config.ui.theme)](config.ui.modules);
+    UI[config.ui.theme](config.ui.modules);
 
     window.UI = UI;
 }

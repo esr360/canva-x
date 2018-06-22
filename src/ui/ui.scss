@@ -15,10 +15,6 @@
 @import '../../node_modules/Sass-Boost/dist/sass-boost';
 @import '../../node_modules/spinners/stylesheets/spinners';
 @import '../../node_modules/Synergy/dist/synergy';
-//@import '../../../Synergy/src/scss/synergy';
-
-// CSS librarys
-@import '../../node_modules/flickity/dist/flickity';
 
 //*****************************************************************
 // Configuration
@@ -66,29 +62,12 @@ $sass-config-parser: map-get($ui, 'sass-config-parser');
 // Elements
 //*****************************************************************
 
-@import 'modules/elements/alert/alert';
-@import 'modules/elements/button/button';
-@import 'modules/elements/heading/heading';
-@import 'modules/elements/image/image';
-@import 'modules/elements/list/list';
-@import 'modules/elements/modal/modal';
-@import 'modules/elements/progress-bars/progress-bars';
-@import 'modules/elements/tooltips/tooltips';
-
 //*****************************************************************
 // Objects
 //*****************************************************************
-
-@import 'modules/objects/footer/footer';
-@import 'modules/objects/header/header';
-@import 'modules/objects/logo/logo';
-@import 'modules/objects/navigation/navigation';
-@import 'modules/objects/dropdown/dropdown';
-@import 'modules/objects/overlay/overlay';
-@import 'modules/objects/preloader/preloader';
 
 //*****************************************************************
 // Themes
 //*****************************************************************
 
-@import 'themes/One-Nexus/theme';
+@import 'themes/canva/theme';
