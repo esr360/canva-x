@@ -2,6 +2,7 @@
 .vscode
 .settings
 .sass-cache
+npm-debug.log
 settings.json
 debug.log
 todo.md

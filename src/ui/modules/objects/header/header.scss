@@ -1,0 +1,14 @@
+@import 'header.json';
+
+@mixin header($custom: custom('header')) {
+
+    // Configuration
+    $header: config($header, $custom);
+
+    @include module {
+
+        @content;
+
+    }
+
+}

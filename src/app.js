@@ -29,8 +29,6 @@ import UI from './ui/ui';
 //*****************************************************************
 
 import * as Synergy from 'Synergy';
-//import * as Synergy from '../../../Synergy/src/index.js';
-//import * as Synergy from '../../../Synergy/dist/synergy.js';
 
 window.Module = Synergy.Module;
 window.Component = Synergy.Component;
@@ -49,22 +47,14 @@ window.Column = Column;
 //*****************************************************************
 
 // Elements
-//export { default as Accordion } from './ui/modules/elements/accordion/accordion.jsx';
-
-export {
-    // Button
-}
-
-// window.Button = Button;
 
 // Objects
+import Header from './ui/modules/objects/header/header.jsx';
 
+window.Header = Header;
 
 // Views
 //*****************************************************************
-
-// Tools
-export { default as Section } from './views/tools/section.jsx';
 
 // Layouts
 import Base from './views/layouts/base.jsx';

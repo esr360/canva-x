@@ -8,7 +8,6 @@
 @import 'theme.json';
 
 @if map-get-deep($ui, 'theme') == 'canva' {
-
     // Merge config with UI-level config
     $theme: map-merge-deep($theme, map-get($ui, 'modules'));
 
@@ -33,10 +32,9 @@
     /// Elements
     ///************************************************************
 
-
     ///************************************************************
     /// Objects
     ///************************************************************
 
-
+    @include header;
 }
