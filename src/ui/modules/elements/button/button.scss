@@ -1,0 +1,128 @@
+@import 'button.json';
+
+@mixin button($custom: custom('button')) {
+
+    // Configuration
+    $button: config($button, $custom);
+
+    @include module {
+
+        //*********************************************************
+        // Core Styles
+        //*********************************************************
+
+        cursor: pointer;
+        display: inline-block;
+        border-color: transparent;
+        text-decoration: none;
+        vertical-align: middle;
+
+        //*********************************************************
+        // Sizes
+        //*********************************************************
+
+        @include font-sizes(('sizes': this('sizes')));
+
+        //*********************************************************
+        // Colors
+        //*********************************************************
+
+        @each $key, $color in merge-palettes(this('palettes')) {
+            @include modifier($key) {
+                background: $color;
+
+                &:hover {
+                    background: darken($color, 10%);
+                }
+            }
+        }
+
+        //*********************************************************
+        // Modifiers
+        //*********************************************************
+
+        @include modifier('disabled') {
+            cursor: not-allowed;
+            transition-delay: 999s;
+            opacity: this('disabled-opacity');
+        }
+
+        @include modifier('round') {
+            border-radius: this('round-radius');
+        }
+
+        @include modifier('circle') {
+            border-radius: 1.5em;
+        }
+
+        @include modifier('sharp') {
+            border-radius: 0;
+        }
+
+        //*********************************************************
+        // Components
+        //*********************************************************
+
+        @include component('group') {
+            @include module {
+                margin-left: this('group-spacing');
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            @include modifier('pills') {
+                display: table;
+                width: 100%;
+
+                @include module {
+                    display: table-cell;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        a[class*="#{this('name')}"] {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+
+        //*********************************************************
+        // Pseudo States
+        //*********************************************************
+
+        &:hover {
+            background: darken(this('background'), 10%);
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        //*********************************************************
+        // Custom Content
+        //*********************************************************
+
+        @content;
+
+    } // @include module
+
+    //*************************************************************
+    // Hacks
+    //*************************************************************
+
+    // Makes input & button elements equal height in Firefox
+    input::-moz-focus-inner,
+    button::-moz-focus-inner {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        padding: 0;
+        border: none;
+    }
+
+} // @mixin button

@@ -51,16 +51,6 @@
             "google-plus": "#dd4b39",
             "email": "#6cb42c",
             "stumbleupon": "#47AD20"
-        },
-        "gradients": {
-            "brand": {
-                "direction": "135deg",
-                "color-stops": [
-                    "brand-1 0%", 
-                    "brand-2 20%", 
-                    "brand-3 100%"
-                ]
-            }
         }
     }
 }

@@ -1,14 +1,62 @@
 @import 'header.json';
 
 @mixin header($custom: custom('header')) {
-
     // Configuration
-    $header: config($header, $custom);
+    $header: config($header, $custom) !global;
 
     @include module {
+        display: flex;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        top: 0;
+
+        @if type-of(this('background')) == 'map' and this('background', 'gradient') {
+            background: gradient(
+                this('background', 'gradient', 'direction'),
+                this('background', 'gradient', 'colors')
+            );
+        }
+
+        @include component('tools') {
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        @include component('project') {
+            margin-left: auto;
+
+            > * {
+                margin-left: 0.75em;
+            }
+        }
+
+        @include component('action') {
+            display: block;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        @include component('changes') {
+            font-style: italic;
+            color: rgba(white, 0.6);
+            margin-left: 1em;
+        }
+
+        @include component('doctype') {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a {
+            color: this('link-color');
+        }
 
         @content;
-
     }
-
 }

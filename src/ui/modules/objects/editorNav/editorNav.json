@@ -1,0 +1,9 @@
+{
+    "editorNav": {
+        "name": "editorNav",
+        "width": "450px",
+        "menu": {
+            "font-size": ["#FONT-SIZE", "size-2"]
+        }
+    }
+}

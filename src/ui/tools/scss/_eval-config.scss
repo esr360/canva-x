@@ -4,7 +4,6 @@
 ///
 /// @param {string} $func
 @function eval-config($config) {
-
     @if type-of($config) == 'list' {
         $func: nth($config, 1);
         $params: list-remove($config, $func);

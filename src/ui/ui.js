@@ -24,18 +24,8 @@ export {
 // Modules
 //*****************************************************************
 
-// Elements
-
 // Objects
-
-// Utilities
-
-// Tools
-//*****************************************************************
-
-import { evalConfig } from './tools/js/app.evalConfig';
-
-export { evalConfig };
+export { default as editorPane } from './modules/objects/editorPane/editorPane';
 
 // Theme
 //*****************************************************************

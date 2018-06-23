@@ -8,6 +8,7 @@ export class Core extends React.Component {
                     <title>Title</title>
 
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
                 </head>
                 <body>
                     <div id='app'>{this.props.children}</div>

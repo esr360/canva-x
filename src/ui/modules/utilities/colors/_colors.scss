@@ -78,12 +78,7 @@
 /// @group utilities
 /// @param {map} $gradient - the desired gradient from the $palettes variable
 /// @return {color} - the desired color value
-@function gradient($gradient) {
-
-    $gradient: color('gradients', $gradient);
-    $direction: map-get($gradient, 'direction');
-    $color-stops: map-get($gradient, 'color-stops');
-
+@function gradient($direction, $color-stops) {
     @each $color-stop in $color-stops {
         $color: nth($color-stop, 1);
 
@@ -95,5 +90,4 @@
     $color-stops: join($color-stops, (), comma);
 
     @return linear-gradient($direction, $color-stops);
-
 }

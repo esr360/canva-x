@@ -28,7 +28,8 @@ import UI from './ui/ui';
 // Synergy
 //*****************************************************************
 
-import * as Synergy from 'Synergy';
+import * as Synergy from '../../../Synergy/src/index.js';
+//import * as Synergy from 'Synergy';
 
 window.Module = Synergy.Module;
 window.Component = Synergy.Component;
@@ -47,21 +48,20 @@ window.Column = Column;
 //*****************************************************************
 
 // Elements
+import Button from './ui/modules/elements/button/button.jsx';
 
 // Objects
 import Header from './ui/modules/objects/header/header.jsx';
+import EditorNav from './ui/modules/objects/editorNav/editorNav.jsx';
+import EditorPane from './ui/modules/objects/editorPane/editorPane.jsx';
 
+window.Button = Button;
 window.Header = Header;
+window.EditorNav = EditorNav;
+window.EditorPane = EditorPane;
 
 // Views
 //*****************************************************************
-
-// Layouts
-import Base from './views/layouts/base.jsx';
-
-export const layouts = { 
-    Base
-};
 
 // Pages
 import Index from './views/pages/index.jsx';

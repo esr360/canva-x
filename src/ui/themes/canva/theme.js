@@ -32,5 +32,5 @@ export default function(custom) {
     /// Objects
     ///************************************************************
 
-    window.THEME = UI.evalConfig(UI.deepextend(UI.config, options));
+    UI.editorPane();
 }

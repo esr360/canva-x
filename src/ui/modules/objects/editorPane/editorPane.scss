@@ -1,0 +1,23 @@
+@import 'editorPane.json';
+
+@mixin editorPane($custom: custom('editorPane')) {
+    // Configuration
+    $editorPane: config($editorPane, $custom);
+
+    @include module {
+        margin-left: map-get($editorNav, 'width');
+        height: calc(100% - #{ map-get($header, 'height') });
+        top: map-get($header, 'height');
+        position: relative;
+        min-height: 450px;
+
+        @include component('canvas') {
+            @include vertical-center;
+            @include horizontal-center;
+
+            background: color('greyscale', 'grey-2');
+            width: 600px;
+            height: 400px;
+        }
+    }
+}

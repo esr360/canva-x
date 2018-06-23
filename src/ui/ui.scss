@@ -14,7 +14,8 @@
 @import '../../node_modules/Kayzen-GS/dist/kayzen-gs.scss';
 @import '../../node_modules/Sass-Boost/dist/sass-boost';
 @import '../../node_modules/spinners/stylesheets/spinners';
-@import '../../node_modules/Synergy/dist/synergy';
+//@import '../../node_modules/Synergy/dist/synergy';
+@import '../../../../Synergy/src/scss/synergy';
 
 //*****************************************************************
 // Configuration
@@ -62,11 +63,15 @@ $sass-config-parser: map-get($ui, 'sass-config-parser');
 // Elements
 //*****************************************************************
 
+@import 'modules/elements/button/button';
+
 //*****************************************************************
 // Objects
 //*****************************************************************
 
 @import 'modules/objects/header/header';
+@import 'modules/objects/editorNav/editorNav';
+@import 'modules/objects/editorPane/editorPane';
 
 //*****************************************************************
 // Themes

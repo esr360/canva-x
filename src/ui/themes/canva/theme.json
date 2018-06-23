@@ -1,37 +1,34 @@
 {
     "theme": {
-        "accordion": {
-            "ding": "dong"
-        },
-        "alert": {
-        },
-        "modal": {
-        },
-        "button": {
-            "border-palettes": ["brand", "alert"]
-        },
         "colors": {
             "brand": {
-                "brand-1": "black",
-                "brand-6": "grey"
+                "brand-1": "#01c4cf",
+                "brand-2": "#7d29e8"
             }
         },
-        "core": {},
-        "header": {},
-        "billboard": {
-            "fullscreen": {
-                "enabled": false
+        "header": {
+            "background": {
+                "gradient": {
+                    "direction": "135deg",
+                    "colors": ["brand-1",  "brand-2"]
+                }
+            }
+        },
+        "button": {
+            "modifier(primary)": {
+                "background": "white",
+                "color": ["#COLOR", "greyscale", "grey-5"],
+                "hover": {
+                    "background": "darken(white, 5%)"
+                }
             },
-            "overlay": {
-                "enabled": true
-            }
-        },
-        "tables": {
-            "background": "white",
-            "padding": "0.5em 1em",
-            "border": "1px solid rgba(0,0,0,0.1)",
-            "-small": {
-                "max-width": "450px"
+            "modifier(tertiary)": {
+                "background": "rgba(black, 0.4)",
+                "color": "rgba(white, 0.8)",
+                "hover": {
+                    "background": "rgba(black, 0.6)",
+                    "color": "white"
+                }
             }
         }
     }

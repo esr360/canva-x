@@ -1,6 +1,16 @@
 {
     "header": {
         "name": "header",
-        "background": "blue"
+        "background": "blue",
+        "height": "70px",
+        "padding": "1em",
+        "color": ["#COLOR", "greyscale", "white"],
+        "link-color": ["#COLOR", "greyscale", "white"],
+        "action": {
+            "transition": ["#CORE", "transition"],
+            "hover": {
+                "background": "rgba(black, 0.3)"
+            }
+        }
     }
 }

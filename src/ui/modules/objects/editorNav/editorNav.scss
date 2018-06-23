@@ -1,0 +1,54 @@
+@import 'editorNav.json';
+
+@mixin editorNav($custom: custom('editorNav')) {
+    // Configuration
+    $editorNav: config($editorNav, $custom) !global;
+    $menu-width: 90px;
+
+    @include module {
+        position: fixed;
+        top: map-get($header, 'height');
+        height: 100%;
+        background: color('greyscale', 'grey-5');
+        overflow: scroll;
+
+        @include component('menu') {
+            background: color('greyscale', 'grey-6');
+            position: fixed;
+            height: 100%;
+            width: $menu-width;
+            left: 0;
+            margin-top: 0;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                cursor: pointer;
+                text-align: center;
+                padding: 1.2em 1em;
+
+                &:hover, &.active {
+                    background: color('greyscale', 'grey-5');
+                }
+
+                &:hover {
+                    color: color('brand', 'brand-1');
+                }
+
+                &.active {
+                    color: white;
+                }
+            }
+
+            .fa {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @include component('pane') {
+            margin-left: $menu-width;
+            padding: 0.5em;
+        }
+    }
+}

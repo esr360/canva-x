@@ -14,7 +14,6 @@
     $typography: config($typography, $custom);
 
     @include module {
-
         @at-root {
 
             //*****************************************************
@@ -50,27 +49,7 @@
                 }
             }
 
-            //*****************************************************
-            // Styles
-            //*****************************************************
-
-            // Links
-            a:not([class*='button']) {
-                transition: color 0.4s;
-                color: this('colors', 'link');
-                text-decoration: none;
-
-                p > &, small > & {
-                    border-bottom: 1px solid;
-                }
-
-                &:hover {
-                    color: this('colors', 'link-hover');
-                }
-            }
-
         }
-
     }
 
 } // @mixin typography
