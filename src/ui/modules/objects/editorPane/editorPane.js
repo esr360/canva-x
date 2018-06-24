@@ -28,7 +28,7 @@ export default function editorPane(custom) {
         }
         
         /**
-         * Initial drop event onto the canvas from the gallery
+         * Initial drop event onto the right hand canvas from the gallery
          */
         function dropOnCanvasFromGallery(event) {
             const item = document.createElement('div');
@@ -74,7 +74,7 @@ export default function editorPane(custom) {
         function dropOnCanvas(event) {
             const target = event.target.closest('[data-component');
 
-            if (dragSrcEl != target) {
+            if (dragSrcEl !== target) {
                 dragSrcEl.innerHTML = target.innerHTML;
                 target.innerHTML = event.dataTransfer.getData('text/html');
             }

@@ -1,7 +1,7 @@
 import defaults from './editorNav.json';
 
 const EditorNav = props => (
-    <Module {...props}>
+    <Module name={defaults.editorNav.name} {...props}>
         <Component name='menu'>
             <li><i className='fa fa-2x fa-image'></i> Templates</li>
             <li className='active'><i className='fa fa-2x fa-image'></i> Images</li>
@@ -22,9 +22,5 @@ const EditorNav = props => (
         </Component>
     </Module>
 );
-
-EditorNav.defaultProps = {
-    name: defaults.editorNav.name
-};
 
 export default EditorNav;
