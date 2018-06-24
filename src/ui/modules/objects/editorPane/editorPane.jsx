@@ -1,13 +1,12 @@
 import defaults from './editorPane.json';
 
 const EditorPane = props => (
-    <Module {...props}>
-        <Component tag='div' name='canvas'></Component>
+    <Module name={defaults.editorPane.name} {...props}>
+        <Component tag='div' name='canvas'>
+            <Component name='grid'>
+            </Component>
+        </Component>
     </Module>
 );
-
-EditorPane.defaultProps = {
-    name: defaults.editorPane.name
-};
 
 export default EditorPane;
