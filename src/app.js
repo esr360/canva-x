@@ -5,11 +5,7 @@
 /// @author [@esr360](http://twitter.com/esr360)
 ///****************************************************************
 
-import initialConfig from './app.json';
-
-export const config = JSON.parse(
-    JSON.stringify(initialConfig).replace(/"'/g,'"').replace(/'"/g,'"')
-);
+import config from './app.json';
 
 // React
 //*****************************************************************
@@ -28,21 +24,10 @@ import UI from './ui/ui';
 // Synergy
 //*****************************************************************
 
-import * as Synergy from '../../../Synergy/src/index.js';
-//import * as Synergy from 'Synergy';
+import * as Synergy from 'Synergy';
 
 window.Module = Synergy.Module;
 window.Component = Synergy.Component;
-window.Group = Synergy.Group;
-window.Wrapper = Synergy.Wrapper;
-
-// Kayzen-GS
-//*****************************************************************
-
-import { Row, Column } from '../../../Kayzen-GS/src/js/index.js';
-
-window.Row = Row; 
-window.Column = Column;
 
 // UI React Components
 //*****************************************************************
@@ -65,11 +50,9 @@ window.EditorPane = EditorPane;
 
 // Pages
 import Index from './views/pages/index.jsx';
-import Accordion from './views/pages/modules/elements/accordion.jsx';
 
 export const pages = {
-    Index, 
-    Accordion
+    Index
 }
 
 // Render App
@@ -89,17 +72,5 @@ export default locals => ReactDOMServer.renderToStaticMarkup(
 if (process.env.APP_ENV === 'web') {
     UI(config.app.ui);
 
-    //ReactDOM.render(<HashRouter><App data={config.app.views} /></HashRouter>, app)
     ReactDOM.render(<HashRouter><App data={config.app.views} /></HashRouter>, app, () => UI(config.app.ui));
-}
-
-// Call the UI function once the react app has loaded
-if (process.env.APP_ENV === 'node') {
-    var ReactDOMLoaded = setInterval(() => {
-        if (document.getElementById('app') !== '') {
-            UI(config.app.ui);
-    
-            clearInterval(ReactDOMLoaded);
-        }
-    }, 100);
 }

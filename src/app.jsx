@@ -6,18 +6,10 @@ if (process.env.APP_ENV === 'web') {
     require('./app.scss');
 }
 
-/**
- * App JSX Component
- */
-export default class App extends React.Component {
-    render() {
-        //window.addEventListener('hashchange', app.UI, false);
+const App = () => (
+    <Switch>
+        <Route path='/' exact component={app.pages.Index} />
+    </Switch>
+);
 
-        return (
-            <Switch>
-                <Route path='/' exact component={app.pages.Index} />
-                <Route path='/accordion' component={app.pages.Accordion} />
-            </Switch>
-        )
-    }
-}
+export default App;

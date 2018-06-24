@@ -8,29 +8,9 @@
 import * as UI from '../../ui';
 import config from './theme.json';
 
-/**
- * @example import canva from './themes/canva/theme'
- * @param {Object} custom 
- */
 export default function(custom) {
-
     const options = UI.deepextend(config.theme, custom);
 
-    ///************************************************************
-    /// Utilities
-    ///************************************************************
-
-    //UI.colors();
-
-    ///************************************************************
-    /// Elements
-    ///************************************************************
-
-    //UI.accordion(options.accordion);
-
-    ///************************************************************
     /// Objects
-    ///************************************************************
-
-    UI.editorPane();
+    UI.editorPane(options.editorPane);
 }

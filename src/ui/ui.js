@@ -38,8 +38,6 @@ export default function(custom, callback) {
     UI[config.ui.theme](config.ui.modules);
 
     window.UI = UI;
-
-    window.Synergy.modules = {};
 }
 
 // Global Methods

@@ -1,40 +1,18 @@
 {
-  "name": "one-nexus",
-  "version": "3.1.0",
-  "description": "A toolkit for architecting and constructing modular front-end user-interfaces",
-  "keywords": [
-    "css",
-    "sass",
-    "js",
-    "responsive",
-    "mobile-first",
-    "front-end",
-    "framework",
-    "boilerplate",
-    "web",
-    "development",
-    "theme",
-    "themes",
-    "html",
-    "html5"
-  ],
+  "name": "canva-x",
+  "version": "1.0.0",
   "author": "(Edmund Reed)[http://twitter.com/esr360] <esr360@live.com>",
-  "homepage": "https://onenexus.io/",
-  "bugs": {
-    "url": "https://github.com/esr360/One-Nexus/issues"
-  },
   "dependencies": {
     "Kayzen-GS": "^2.4.0",
     "Sass-Boost": "^1.1.1",
-    "Synergy": "^3.10.0",
+    "Synergy": "^3.10.2",
     "deep-extend": "^0.5.0",
     "jquery": "^3.2.1",
     "normalize-scss": "^7.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-router-dom": "^4.2.2",
-    "spinners": "^1.2.2"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -78,7 +56,6 @@
     "build": "npm run build:prod",
     "build:dev": "webpack --env.build=development",
     "build:prod": "webpack --env.build=production",
-    "build:static": "webpack --env.static=true --env.build=development && npm run sass:dev",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint './src/js/**/*.js'",
     "lint:scss": "stylelint src/scss/**/*.scss",

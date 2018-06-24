@@ -31,6 +31,8 @@ export default function editorPane(custom) {
          * Initial drop event onto the right hand canvas from the gallery
          */
         function dropOnCanvasFromGallery(event) {
+            event.stopPropagation();
+
             const item = document.createElement('div');
 
             item.classList.add('editorPane_item');

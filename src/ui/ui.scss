@@ -11,11 +11,8 @@
 
 // Sass librarys
 @import '../../node_modules/normalize-scss/sass/normalize';
-@import '../../node_modules/Kayzen-GS/dist/kayzen-gs.scss';
 @import '../../node_modules/Sass-Boost/dist/sass-boost';
-@import '../../node_modules/spinners/stylesheets/spinners';
-//@import '../../node_modules/Synergy/dist/synergy';
-@import '../../../../Synergy/src/scss/synergy';
+@import '../../node_modules/Synergy/dist/synergy';
 
 //*****************************************************************
 // Configuration
@@ -39,10 +36,8 @@ $sass-config-parser: map-get($ui, 'sass-config-parser');
 @import 'tools/scss/background';
 @import 'tools/scss/custom';
 @import 'tools/scss/eval-config';
-@import 'tools/scss/fill-parent';
 @import 'tools/scss/font-sizes';
 @import 'tools/scss/horizontal-center';
-@import 'tools/scss/overlay';
 @import 'tools/scss/retrieve-value';
 @import 'tools/scss/vertical-center';
 @import 'tools/scss/vertical-rhythm';
@@ -53,10 +48,8 @@ $sass-config-parser: map-get($ui, 'sass-config-parser');
 
 @import 'modules/utilities/grid/grid';
 @import 'modules/utilities/colors/colors';
-@import 'modules/utilities/container/container';
 @import 'modules/utilities/typography/typography';
 @import 'modules/utilities/core/core';
-@import 'modules/utilities/helpers/helpers';
 
 //*****************************************************************
 // Elements

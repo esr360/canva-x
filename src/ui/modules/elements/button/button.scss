@@ -21,7 +21,10 @@
         // Sizes
         //*********************************************************
 
-        @include font-sizes(('sizes': this('sizes')));
+        @include font-sizes((
+            'sizes': this('sizes'),
+            'fluid-scaling': false
+        ));
 
         //*********************************************************
         // Colors

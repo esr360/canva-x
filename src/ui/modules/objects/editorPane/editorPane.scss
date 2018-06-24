@@ -5,8 +5,8 @@
     $editorPane: config($editorPane, $custom);
 
     @include module {
+        height: calc(100% - #{map-get($header, 'height')});
         margin-left: map-get($editorNav, 'width');
-        height: calc(100% - #{ map-get($header, 'height') });
         top: map-get($header, 'height');
         position: relative;
         min-height: 450px;
@@ -32,8 +32,9 @@
                 object-fit: cover;
             }
 
-            // The below allows for an infinitely nestable auto-rearranging grid
-            // following the pattern outlined in the challenge brief
+            // The below code allows for an infinitely nestable auto-rearranging
+            // grid following the pattern outlined in the challenge brief
+
             $editorPane-gutter: this('item-gutter');
 
             &:nth-child(1) {
