@@ -36,14 +36,24 @@ export default function editorPane(custom) {
             item.classList.add('editorPane_item');
             item.setAttribute('data-component', 'item');
             item.append(dragSrcEl.cloneNode(true));
+
+            // The below allows for an infinitely nestable auto-rearranging grid
+            // following the pattern outlined in the challenge brief
+            if (dropSource.children.length > 3) {
+                const loopItem = document.createElement('div');
+
+                [...dropSource.children].forEach(node => loopItem.appendChild(node));
+
+                loopItem.classList.add('editorPane_item');
+
+                dropSource.innerHTML = '';
+                dropSource.append(loopItem);
+            }
+
             dropSource.append(item);
 
             editorPane.removeEventListener('drop', dropOnCanvasFromGallery, false);
             item.addEventListener('dragstart', dragOnCanvas, false);
-
-            if (item.parentNode.childNodes.length > 4) {
-                console.log(item.parentNode.childNodes);
-            }
         }
 
         /**
