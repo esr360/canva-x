@@ -49,6 +49,12 @@
         @include component('pane') {
             margin-left: $menu-width;
             padding: 0.5em;
+
+            img {
+                height: 99px;
+                margin-right: 8px;
+                margin-bottom: 8px;
+            }
         }
     }
 }

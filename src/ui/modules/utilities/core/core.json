@@ -10,7 +10,7 @@
         "margin": "2rem",
         "line-height": "1.4",
         "radius": "0.4em",
-        "min-width": "960px",
+        "min-width": "1100px",
         "transition": "0.4s",
         "hrule-color": "rgba(black, 0.15)"
     }

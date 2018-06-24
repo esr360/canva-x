@@ -1,5 +1,6 @@
 {
     "editorPane": {
-        "name": "editorPane"
+        "name": "editorPane",
+        "item-gutter": "8px"
     }
 }

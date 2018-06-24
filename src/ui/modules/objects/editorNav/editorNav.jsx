@@ -3,11 +3,11 @@ import defaults from './editorNav.json';
 const EditorNav = props => (
     <Module name={defaults.editorNav.name} {...props}>
         <Component name='menu'>
-            <li><i className='fa fa-2x fa-image'></i> Templates</li>
+            <li><i className='fa fa-2x fa-columns'></i> Templates</li>
             <li className='active'><i className='fa fa-2x fa-image'></i> Images</li>
-            <li><i className='fa fa-2x fa-image'></i> Text</li>
-            <li><i className='fa fa-2x fa-image'></i> Uploads</li>
-            <li><i className='fa fa-2x fa-image'></i> Folders</li>
+            <li><i className='fa fa-2x fa-font'></i> Text</li>
+            <li><i className='fa fa-2x fa-cloud-upload'></i> Uploads</li>
+            <li><i className='fa fa-2x fa-plus'></i> Folders</li>
         </Component>
 
         <Component name='pane'>
