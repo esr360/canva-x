@@ -38,10 +38,6 @@
             $editorPane-gutter: this('item-gutter') / 2;
             $items: 4;
 
-            @if $items != 4 {
-                @error '$items must be 4';
-            }
-
             @for $i from 1 through $items {
                 &:nth-child(#{$i}) {
                     @for $j from 1 through abs(($i - ($items + 1))) {
