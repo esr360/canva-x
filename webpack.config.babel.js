@@ -31,8 +31,6 @@ export default function(env) {
             React: 'react',
             ReactDOM: 'react-dom',
             Synergize: ['Synergy', 'Synergize']
-            //Synergize: ['../../../../../../../Synergy/dist/synergy.js', 'Synergize']
-            //Synergize: ['../../../../../../../Synergy/src/js/synergize.js', 'Synergize']
         }),
         new CopyWebpackPlugin([
             { from: 'src/ui/images', to: 'assets/images' }

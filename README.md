@@ -47,7 +47,8 @@ export default Index;
 
 ## Installation/Setup
 
-* Built/tested using Node v6.11.4 
+* Built/tested using Node v6.11.4
+* `React` and `ReactDOM` are provided as globals through `webpack.config.babel.js`
 
 ```bash
 git clone https://github.com/esr360/canva-x.git
@@ -78,7 +79,7 @@ http://localhost:3000/
 
 ## Theme
 
-Any customizable/configurable aspects of the UI would in theory be controllable by [`ui/themes/canva/theme.json`](https://github.com/esr360/canva-x/blob/master/src/ui/themes/canva/theme.json):
+Any customizable/configurable aspects of the UI would in theory be controllable by [`ui/themes/canva/theme.json`](https://github.com/esr360/canva-x/blob/master/src/ui/themes/canva/theme.json), allowing for cosmetic changes to be made without touching any source code:
 
 ```json
 {
@@ -157,3 +158,4 @@ Now, regardless of your theme, the `brand-1` color would always be `pink`.
 * Add animation effects
 * Fix cross-browser issues
 * Address scaling of individual images in canvas
+* UI tweaks to match provided mockup (logo, color swatch etc.)
