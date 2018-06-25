@@ -35,76 +35,34 @@
             // The below code allows for an infinitely nestable auto-rearranging
             // grid following the pattern outlined in the challenge brief
 
-            $editorPane-gutter: this('item-gutter');
+            $editorPane-gutter: this('item-gutter') / 2;
+            $items: 4;
 
-            &:nth-child(1) {
-                &:nth-last-child(1) {
-                    width: 100%;
-                }
-
-                &:nth-last-child(2) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-right: $editorPane-gutter / 2;
-                    height: 100%;
-                }
-
-                &:nth-last-child(3) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-right: $editorPane-gutter / 2;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-bottom: $editorPane-gutter / 2;
-                }
-
-                &:nth-last-child(4) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-right: $editorPane-gutter / 2;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-bottom: $editorPane-gutter / 2;
-                }
+            @if $items != 4 {
+                @error '$items must be 4';
             }
 
-            &:nth-child(2) {
-                &:nth-last-child(1) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-left: $editorPane-gutter / 2;
-                    height: 100%;
+            @for $i from 1 through $items {
+                &:nth-child(#{$i}) {
+                    @for $j from 1 through abs(($i - ($items + 1))) {
+                        &:nth-last-child(#{$j}) {
+                            width: if($j == 1 and $i % 2 == 1, 100%, calc(50% - #{$editorPane-gutter}));
+                            height: if($i + $j < $items, 100%, calc(50% - #{$editorPane-gutter}));
+                            @if ($i % 2 == 0) {
+                                margin-left: $editorPane-gutter;
+                            }
+                            @if ($i % 2 == 1 and $j > 1) {
+                                margin-right: $editorPane-gutter;
+                            }
+                            @if ($i > ($items / 2)) {
+                                margin-top: $editorPane-gutter;
+                            }
+                            @if ($i <= ($items / 2) and ($i + $j) >= $items) {
+                                margin-bottom: $editorPane-gutter;
+                            }
+                        }
+                    }
                 }
-
-                &:nth-last-child(2) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-left: $editorPane-gutter / 2;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-bottom: $editorPane-gutter / 2;
-                }
-
-                &:nth-last-child(3) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-left: $editorPane-gutter / 2;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-bottom: $editorPane-gutter / 2;
-                }
-            }
-
-            &:nth-child(3) {
-                &:nth-last-child(1) {
-                    width: 100%;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-top: $editorPane-gutter / 2;
-                }
-
-                &:nth-last-child(2) {
-                    width: calc(50% - #{$editorPane-gutter / 2});
-                    margin-right: $editorPane-gutter / 2;
-                    height: calc(50% - #{$editorPane-gutter / 2});
-                    margin-top: $editorPane-gutter / 2;
-                }
-            }
-
-            &:nth-child(4) {
-                width: calc(50% - #{$editorPane-gutter / 2});
-                margin-left: $editorPane-gutter / 2;
-                height: calc(50% - #{$editorPane-gutter / 2});
-                margin-top: $editorPane-gutter / 2;
             }
         }
     }

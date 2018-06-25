@@ -41,7 +41,7 @@ export default function editorPane(custom) {
 
             // The below allows for an infinitely nestable auto-rearranging grid
             // following the pattern outlined in the challenge brief
-            if (dropSource.children.length > 3) {
+            if (dropSource.children.length === 4) {
                 const loopItem = document.createElement('div');
 
                 [...dropSource.children].forEach(node => loopItem.appendChild(node));
