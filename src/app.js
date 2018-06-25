@@ -10,7 +10,6 @@ import config from './app.json';
 // React
 //*****************************************************************
 
-import ReactDOMServer from 'react-dom/server';
 import { HashLink as Link } from 'react-router-hash-link';
 import { StaticRouter, HashRouter, Switch, Route } from 'react-router-dom';
 
@@ -59,14 +58,6 @@ export const pages = {
 //*****************************************************************
 
 import App from './app.jsx';
-import { Core } from './views/core.jsx';
-
-// Render on the server for static pages
-export default locals => ReactDOMServer.renderToStaticMarkup(
-    <StaticRouter location={locals.path} context={{}}>
-        <Core styles={true}><App data={config.app.views} /></Core>
-    </StaticRouter>
-);
 
 // Render on the client for standard React app
 if (process.env.APP_ENV === 'web') {
