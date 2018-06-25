@@ -25,7 +25,7 @@ Given the limitations in both time and scope, the experience I ended up creating
 
 <img src="http://edmundreed.com/canva/assets/images/infinite.png" width="600px">
 
-This is achieved mostly through [clever use of CSS](https://github.com/esr360/canva-x/blob/master/src/ui/modules/objects/editorPane/editorPane.scss#L35), using [JavaScript to add the appropriate classes](https://github.com/esr360/canva-x/blob/master/src/ui/modules/objects/editorPane/editorPane.js#L42) when needed.
+This is achieved mostly through [clever use of CSS](https://github.com/esr360/canva-x/blob/master/src/ui/modules/objects/editorPane/editorPane.scss#L35) and using [JavaScript to add the appropriate classes](https://github.com/esr360/canva-x/blob/master/src/ui/modules/objects/editorPane/editorPane.js#L42) when needed.
 
 ### React App
 
