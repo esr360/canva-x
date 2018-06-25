@@ -13,7 +13,7 @@
 * Images can be dragged from the left hand gallery into the right hand canvas
 * Images in the canvas can be re-arranged
 * Uses HTML5 drag & drop API (please use Chrome for viewing)
-* Built using my [`One-Nexus`](https://github.com/esr360/One-Nexus) boilerplate (which in turn is built using my [`Synergy`](https://github.com/esr360/Synergy) framework)
+* Built using my [`One-Nexus`](https://github.com/esr360/One-Nexus) boilerplate (which in turn is built using my [`Synergy`](https://github.com/esr360/Synergy) framework) (thanks to this task I found and fixed 2 bugs - [here](https://github.com/esr360/Synergy/commit/f782318931a8f304bcae9e5334e0195acc081ce4), and [here](https://github.com/esr360/Synergy/commit/2eb73b9dcc27c8db3898002814b6eda0cc6a96b2))
 * React is used for presentational components (using [FSC's](https://javascriptplayground.com/functional-stateless-components-react/))
 * Although React is used for presentational components, this is not a typical React SPA (no state/store)
 * The UI can be configured via [`ui/themes/canva/theme.json`](https://github.com/esr360/canva-x/blob/master/src/ui/themes/canva/theme.json) ([learn more](#theme))
