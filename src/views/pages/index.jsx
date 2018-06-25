@@ -1,5 +1,3 @@
-import * as app from '../../app';
-
 const Index = () => (
     <main>
         <Header />
