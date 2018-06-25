@@ -21,7 +21,7 @@
 
 ### Grid Recursion
 
-Given the limitations in both time and scope, the experienced I ended up creating (as a POC) takes the pattern from the provided mockups and recurses it infinitely, so you would end up with something like:
+Given the limitations in both time and scope, the experience I ended up creating (as a POC) takes the pattern from the provided mockups and recurses it infinitely, so you would end up with something like:
 
 <img src="http://edmundreed.com/canva/assets/images/infinite.png" width="600px">
 
